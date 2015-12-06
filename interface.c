@@ -2216,7 +2216,7 @@ void print_chat_info_gw (struct tgl_state *TLSR, void *extra, int success, struc
 
 void print_user_status (struct tgl_user_status *S, struct in_ev *ev) {
   assert(!enable_json); //calling functions print_user_info_gw() and user_status_upd() already check.
-  if (S->online > 0) {
+/*  if (S->online > 0) {
     mprintf (ev, "online (was online ");
     print_date_full (ev, S->when);
     mprintf (ev, ")");
@@ -2234,7 +2234,7 @@ void print_user_status (struct tgl_user_status *S, struct in_ev *ev) {
     } else if (S->online == -4) {
       mprintf (ev, "offline (was online last month)");
     }
-  }
+  }*/
 }
 
 void print_user_info_gw (struct tgl_state *TLSR, void *extra, int success, struct tgl_user *U) {
